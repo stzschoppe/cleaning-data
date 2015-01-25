@@ -42,5 +42,60 @@ This dataset is distributed AS-IS and no responsibility implied or explicit can 
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
+Data Preparation
+========
+
+The data was patitioned in a training and a test data set. Either consisting of measurements, activities and subjects.
+
+Following steps were performed:
+
+(1) import raw data
+(2) combining test and training data sets
+(3) assembling whole data set (subject, activity, measurements)
+(4) renaming variables using the features.txt
+(5) subsetting all columns containing "mean" and "std" of taken *measurements* as well as subject and activity. magnitude and time derived data was excluded as it is no "mean and standard deviation for each measurement".
+(6) introducing speaking activity names using the activity labels provided.
+(7) altering variable names for easier reading by removing "-" and "()" and introducing camelCase
+
+The result is the data set "data".
+
+
+To create a tidy summary data set the data was grouped by subject and activity and for each measurement the mean was calculated. Result is the data set "data_summary".
+
+Description of variables
+========
+##subject         
+tBodyAccMeanX    
+tBodyAccMeanY    
+tBodyAccMeanZ   
+tBodyAccStdX     
+tBodyAccStdY     
+tBodyAccStdZ     
+tGravityAccMeanX
+tGravityAccMeanY 
+tGravityAccMeanZ 
+tGravityAccStdX  
+tGravityAccStdY 
+tGravityAccStdZ  
+tBodyGyroMeanX   
+tBodyGyroMeanY   
+tBodyGyroMeanZ  
+tBodyGyroStdX    
+tBodyGyroStdY    
+tBodyGyroStdZ    
+fBodyAccMeanX   
+fBodyAccMeanY    
+fBodyAccMeanZ    
+fBodyAccStdX     
+fBodyAccStdY    
+fBodyAccStdZ     
+fBodyGyroMeanX   
+fBodyGyroMeanY   
+fBodyGyroMeanZ  
+fBodyGyroStdX    
+fBodyGyroStdY    
+fBodyGyroStdZ    
+activity
+
 
 
