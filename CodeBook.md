@@ -49,13 +49,20 @@ The data was patitioned in a training and a test data set. Either consisting of 
 
 Following steps were performed:
 
-(1) import raw data
-(2) combining test and training data sets
-(3) assembling whole data set (subject, activity, measurements)
-(4) renaming variables using the features.txt
-(5) subsetting all columns containing "mean" and "std" of taken *measurements* as well as subject and activity. magnitude and time derived data was excluded as it is no "mean and standard deviation for each measurement".
-(6) introducing speaking activity names using the activity labels provided.
-(7) altering variable names for easier reading by removing "-" and "()" and introducing camelCase
+##(1) 
+import raw data
+##(2) 
+combining test and training data sets
+##(3) 
+assembling whole data set (subject, activity, measurements)
+##(4) 
+renaming variables using the features.txt
+##(5) 
+subsetting all columns containing "mean" and "std" of taken *measurements* as well as subject and activity. magnitude and time derived data was excluded as it is no "mean and standard deviation for each measurement".
+##(6) 
+introducing speaking activity names using the activity labels provided.
+##(7) 
+altering variable names for easier reading by removing "-" and "()" and introducing camelCase
 
 The result is the data set "data".
 
@@ -64,7 +71,18 @@ To create a tidy summary data set the data was grouped by subject and activity a
 
 Description of variables
 ========
+
 ##subject         
+###variable: 
+subject
+###decription: 
+Subject id 
+###domain: 
+1..30
+
+
+##measurements
+###variable: 
 tBodyAccMeanX    
 tBodyAccMeanY    
 tBodyAccMeanZ   
@@ -94,8 +112,19 @@ fBodyGyroMeanY
 fBodyGyroMeanZ  
 fBodyGyroStdX    
 fBodyGyroStdY    
-fBodyGyroStdZ    
+fBodyGyroStdZ 
+###decription: 
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAccXYZ and tGyroXYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAccXYZ and tGravityAccXYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.
+Both mean and standard derivation of the measurements were calculeted (denoted by tBodyAccMeanXYZ or tBodyAccStdXYZ)
+###domain: 
+Features are normalized and bounded within [-1,1]
+   
+##activity
+###variable: 
 activity
-
+###decription: 
+Activity performed during measurements
+###domain: 
+LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS
 
 
