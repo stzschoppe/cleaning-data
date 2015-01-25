@@ -6,4 +6,6 @@ In order to perform the analysis the data has to be in the same directory as the
 
 Result of the analysis are two data sets called "data" and "data_summary".
 
+data_summary is written into the working directory as "data_summary.txt".
+
 Further information is located in the "CodeBook.md" file.

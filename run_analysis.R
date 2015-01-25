@@ -58,3 +58,6 @@ rm(data_raw, data_sub, data_merged, activity_labels, var_names)
 #create a summary of the data grouped by subject and activity, 
 #calculating means of each measurement
 data_summary <- data %>% group_by(subject, activity) %>% summarise_each(funs(mean))
+
+#creating output
+write.table(data_summary, row.names = F, file = "data_summary.txt")
